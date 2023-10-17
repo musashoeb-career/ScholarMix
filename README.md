@@ -1,2 +1,2 @@
-# hackdearborn2
+# Study Buddies!
 HackDearborn2 2023!
