@@ -19,7 +19,7 @@ let package = Package(
             bundleIdentifier: "com.meher.ScholarMix",
             displayVersion: "1.0",
             bundleVersion: "1",
-            appIcon: .placeholder(icon: .chatMessage),
+            appIcon: .asset("AppIcon"),
             accentColor: .presetColor(.yellow),
             supportedDeviceFamilies: [
                 .pad,
