@@ -14,6 +14,7 @@ struct View1: View {
                 Text("Top Scholars")
                     .foregroundColor(Color.black)
                     .font(.system(size: 50, weight: .bold))
+                    .offset(x:-24 , y:25)
                 
                 ZStack {
                     Rectangle()
@@ -29,8 +30,14 @@ struct View1: View {
                     Text("musa")
                         .font(.system(size: 35, weight: .bold))
                         .offset(x: -40, y: -75)
+                    Text("99%")
+                        .font(.system(size: 27, weight: .bold))
+                        .foregroundColor(Color(hue: 1.0, saturation: 0.008, brightness: 0.26))
+                        .offset(x: 40, y: -73)
+                        .opacity(0.70)
                     Text("let's be study buddies!")
                         .font(.system(size: 12, weight: .semibold))
+                        .fontWeight(.heavy)
                         .offset(x: -15, y: -50)
                         .italic()
                     Button("Accept") {}
@@ -49,6 +56,28 @@ struct View1: View {
                         .cornerRadius(7)
                         .font(.system(size: 15, weight: .bold))
                         .offset(x: 80, y:65)
+                    ZStack {
+                        Rectangle()
+                            .frame(width: 108.0, height: 20.0)
+                            .cornerRadius(3)
+                            .offset(x: -35, y: -21)
+                            .foregroundColor(Color.white)
+                        Text("UM Dearborn")
+                            .offset(x: -35, y: -21)
+                            .font(.system(size: 15, weight: .bold))
+                        
+                    }
+                    ZStack {
+                        Rectangle()
+                            .frame(width: 30.0, height: 20.0)
+                            .cornerRadius(3)
+                            .offset(x: 40, y: -21)
+                            .foregroundColor(Color.white)
+                        Text("CS")
+                            .offset(x: 40, y: -21)
+                            .font(.system(size: 15, weight: .bold))
+                        
+                    }
                 }
                 
                 ZStack {
@@ -63,8 +92,13 @@ struct View1: View {
                         .clipShape(Circle())
                         .offset(x: -130)
                     Text("fatima")
-                        .font(.system(size: 20, weight: .bold))
-                        .offset(x: -60, y: -20)
+                        .font(.system(size: 30, weight: .bold))
+                        .offset(x: -42)
+                    Text("97%")
+                        .font(.system(size: 30, weight: .bold))
+                        .foregroundColor(Color(hue: 1.0, saturation: 0.008, brightness: 0.26))
+                        .offset(x: 42)
+                        .opacity(0.70)
                     
                 }
                 
@@ -80,18 +114,23 @@ struct View1: View {
                         .clipShape(Circle())
                         .offset(x: -130)
                     Text("jodi")
-                        .font(.system(size: 20, weight: .bold))
-                        .offset(x: -71, y: -20)
+                        .font(.system(size: 30, weight: .bold))
+                        .offset(x: -62)
+                    Text("92%")
+                        .font(.system(size: 30, weight: .bold))
+                        .foregroundColor(Color(hue: 1.0, saturation: 0.008, brightness: 0.26))
+                        .offset(x: 5)
+                        .opacity(0.70)
                     
                 }
                 
                 Button ("Mix it Up!"){}
                     .padding(.horizontal, 15.0)
-                    .padding(.vertical, 17.0)
+                    .padding(.vertical, 13.0)
                     .background(Color(red: 0.809, green: 0.842, blue: 0.709))
-                    .foregroundColor(Color.white)
+                    .foregroundColor(Color.black)
                     .cornerRadius(7)
-                    .font(.system(size: 15, weight: .bold))
+                    .font(.system(size: 25, weight: .bold))
             }
             //.background(Color(hue: 0.085, saturation: 0.0, brightness: 0.955))
         }
@@ -115,18 +154,21 @@ struct View2: View {
 
 struct View3: View {
     var body: some View {
+        Color.gray
         VStack {
             Text("Test")
-                .padding()
         }
+        //.background(Color.gray)
     }
 }
 
     
 struct Main: View {
-    @State private var selectedTab = 0
+    @State private var selectedTab = 2
         
     var body: some View {
+        ZStack {
+            //Color.yellow
             TabView(selection: $selectedTab) {
                 View1()
                     .tabItem {
@@ -149,7 +191,9 @@ struct Main: View {
                     }
                     .tag(2)
             }
+            .background(Color.yellow)
             .navigationBarTitle("Custom Navigation")
+        }
     }
 
 }
