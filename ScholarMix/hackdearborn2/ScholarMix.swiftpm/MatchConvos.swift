@@ -8,8 +8,15 @@
 import Foundation
 
 let matchList = [
-"Jodi",
-"Musa",
-"Fatima",
-"Meher"
+    "Jodi",
+    "Musa",
+    "Fatima",
+    "Meher"
+]
+
+let userPicture: [String:String] = [
+    "Jodi": "taylor",
+    "Musa": "beaba",
+    "Fatima": "lana",
+    "Meher": "soobin"
 ]
