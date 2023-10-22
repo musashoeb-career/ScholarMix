@@ -20,3 +20,10 @@ let userPicture: [String:String] = [
     "Fatima": "lana",
     "Meher": "soobin"
 ]
+
+let userText: [String:[String:String]] = [
+    "Jodi": ["taylor": "hi, we should study again!"],
+    "Musa": ["beaba": "helloooo"],
+    "Fatima": ["lana": "shlay"],
+    "Meher": ["soobin": "study sesh?"]
+]
